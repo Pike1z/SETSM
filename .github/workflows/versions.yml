@@ -42,14 +42,4 @@ jobs:
           push: true
           build-args: COMPILER=${{ env.COMPILER }}
           tags: ${{ format('chargje/setsm_fork:latest-{1}, chargje/setsm_fork:{0}-{1}', steps.get_version.outputs.VERSION, env.COMPILER) }}
-      # -
-      #   name: Build and push Cray
-      #   id: docker_build_cray
-      #   uses: docker/build-push-action@v2
-      #   env:
-      #       COMPILER: cray
-      #   with:
-      #     push: true
-      #     build-args: COMPILER=${{ env.COMPILER }}
-      #     tags: ${{ format('chargje/setsm_fork:latest-{1}, chargje/setsm_fork:{0}-{1}', steps.get_version.outputs.VERSION, env.COMPILER) }}
       
