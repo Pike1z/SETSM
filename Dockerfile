@@ -36,8 +36,7 @@ RUN g++ --version
 
 # Find glibc version
 RUN apt search glibc
-RUN apt search proj-*
-RUN apt-get install libproj-dev
+RUN apt-get update && apt-get install -y libproj-dev
 
 # Create file that holds compiler specific paths
 RUN touch /opt/compilerpath
