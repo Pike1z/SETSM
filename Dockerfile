@@ -47,7 +47,7 @@ wget https://apt.repos.intel.com/intel-gpg-keys/GPG-PUB-KEY-INTEL-SW-PRODUCTS.PU
 apt-key add GPG-PUB-KEY-INTEL-SW-PRODUCTS.PUB; \
 rm GPG-PUB-KEY-INTEL-SW-PRODUCTS.PUB; \
 echo "deb https://apt.repos.intel.com/oneapi all main" | tee /etc/apt/sources.list.d/oneAPI.list; \
-apt update; \
+apt-get update; \
 apt-get install -y intel-oneapi-compiler-dpcpp-cpp-and-cpp-classic; \
 source /opt/intel/oneapi/setvars.sh; \
 echo $PATH > /opt/compilerpath; \
