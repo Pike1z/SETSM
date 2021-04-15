@@ -60,7 +60,7 @@ jobs:
           build-args: 
             COMPILER=${{ env.COMPILER }}
             VERSION=${{ env.UVERSION }}
-          tags: ${{ format('chargje/setsm_fork:latest-{1}_ubuntu-{2}, chargje/setsm_fork:{0}-{1}_ubuntu-{2}', steps.get_version.outputs.VERSION, env.COMPILER, env.UVERSION) }}      -
+          tags: ${{ format('chargje/setsm_fork:latest-{1}_ubuntu-{2}, chargje/setsm_fork:{0}-{1}_ubuntu-{2}', steps.get_version.outputs.VERSION, env.COMPILER, env.UVERSION) }}
       -  
         name: Build and push Intel (Ubuntu latst)
         id: docker_build_intel_latest
@@ -73,4 +73,4 @@ jobs:
           build-args: 
             COMPILER=${{ env.COMPILER }}
             VERSION=${{ env.UVERSION }}
-          tags: ${{ format('chargje/setsm_fork:latest-{1}_ubuntu-{2}, chargje/setsm_fork:{0}-{1}_ubuntu-{2}', steps.get_version.outputs.VERSION, env.COMPILER, env.UVERSION) }}      
+          tags: ${{ format('chargje/setsm_fork:latest-{1}_ubuntu-{2}, chargje/setsm_fork:{0}-{1}_ubuntu-{2}', steps.get_version.outputs.VERSION, env.COMPILER, env.UVERSION) }}
